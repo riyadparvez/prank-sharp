@@ -36,6 +36,11 @@ namespace Prank
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
+            if (keyData == (Keys.Control | Keys.F)) 
+            {
+                return true;
+            }
+            //return base.ProcessCmdKey(ref msg, keyData);
             return true; // <- Stop processing the WM_KeyDown message 
         }
 
