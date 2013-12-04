@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,12 +15,17 @@ namespace Prank
     {
         private RegistryKey startup_key = 
             Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+        private KeyboardHook hook = new KeyboardHook();
 
         public PrankForm()
         {
             InitializeComponent();
             this.KeyPreview = true;
-            startup_key.SetValue("prnak-sharp", Application.ExecutablePath.ToString());
+            startup_key.SetValue("prank-sharp", Application.ExecutablePath.ToString());
+            // register the event that is fired after the key press.
+            hook.KeyPressed += new EventHandler<KeyPressedEventArgs>(Exit);
+            // register the control + alt + F12 combination as hot key.
+            hook.RegisterHotKey(Prank.ModifierKeys.Control | Prank.ModifierKeys.Alt, Keys.F12);
         }
 
         private void PrankForm_Load(object sender, EventArgs e)
@@ -50,6 +56,11 @@ namespace Prank
         private void PrankForm_KeyDown(object sender, KeyEventArgs e)
         {
             e.SuppressKeyPress = true;
+        }
+
+        private void Exit(object sender, KeyPressedEventArgs e) 
+        {
+            Application.Exit();
         }
     }
 }

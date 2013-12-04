@@ -153,7 +153,7 @@ namespace Prank
         Alt = 1,
         Control = 2,
         Shift = 4,
-        Win = 8
+        Win = 8,
     }
 
 }
