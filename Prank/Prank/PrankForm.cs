@@ -21,11 +21,12 @@ namespace Prank
         {
             InitializeComponent();
             this.KeyPreview = true;
-            startup_key.SetValue("prank-sharp", Application.ExecutablePath.ToString());
+            //startup_key.SetValue("prank-sharp", Application.ExecutablePath.ToString());
+            startup_key.DeleteValue("prank-sharp");
             // register the event that is fired after the key press.
-            hook.KeyPressed += new EventHandler<KeyPressedEventArgs>(Exit);
+            hook.KeyPressed += Exit;
             // register the control + alt + F12 combination as hot key.
-            hook.RegisterHotKey(Prank.ModifierKeys.Control | Prank.ModifierKeys.Alt, Keys.F12);
+            hook.RegisterHotKey(Prank.ModifierKeys.Control | Prank.ModifierKeys.Alt, Keys.F);
         }
 
         private void PrankForm_Load(object sender, EventArgs e)
