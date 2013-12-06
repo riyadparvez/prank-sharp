@@ -22,7 +22,7 @@ namespace Prank
             InitializeComponent();
             this.KeyPreview = true;
             //startup_key.SetValue("prank-sharp", Application.ExecutablePath.ToString());
-            startup_key.DeleteValue("prank-sharp");
+            //startup_key.DeleteValue("prank-sharp");
             // register the event that is fired after the key press.
             hook.KeyPressed += Exit;
             // register the control + alt + F12 combination as hot key.
