@@ -8,21 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Prank.Properties 
-{
+namespace Prank.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase 
-    {
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
         
-        public static Settings Default 
-        {
-            get 
-            {
+        public static Settings Default {
+            get {
                 return defaultInstance;
             }
         }
@@ -30,14 +26,11 @@ namespace Prank.Properties
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Transparent")]
-        public global::System.Drawing.Color Color 
-        {
-            get 
-            {
+        public global::System.Drawing.Color Color {
+            get {
                 return ((global::System.Drawing.Color)(this["Color"]));
             }
-            set 
-            {
+            set {
                 this["Color"] = value;
             }
         }
@@ -45,14 +38,11 @@ namespace Prank.Properties
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public int Transparency 
-        {
-            get 
-            {
+        public int Transparency {
+            get {
                 return ((int)(this["Transparency"]));
             }
-            set 
-            {
+            set {
                 this["Transparency"] = value;
             }
         }
@@ -60,14 +50,11 @@ namespace Prank.Properties
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Ctrl+Shift+P")]
-        public global::System.Windows.Forms.Keys PreferenceShortcut 
-        {
-            get 
-            {
+        public global::System.Windows.Forms.Keys PreferenceShortcut {
+            get {
                 return ((global::System.Windows.Forms.Keys)(this["PreferenceShortcut"]));
             }
-            set 
-            {
+            set {
                 this["PreferenceShortcut"] = value;
             }
         }
@@ -75,15 +62,36 @@ namespace Prank.Properties
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Password 
-        {
-            get 
-            {
+        public string Password {
+            get {
                 return ((string)(this["Password"]));
             }
-            set 
-            {
+            set {
                 this["Password"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("None")]
+        public global::System.Windows.Forms.Keys LockShortcut {
+            get {
+                return ((global::System.Windows.Forms.Keys)(this["LockShortcut"]));
+            }
+            set {
+                this["LockShortcut"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("None")]
+        public global::System.Windows.Forms.Keys UnlockShortcut {
+            get {
+                return ((global::System.Windows.Forms.Keys)(this["UnlockShortcut"]));
+            }
+            set {
+                this["UnlockShortcut"] = value;
             }
         }
     }

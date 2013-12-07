@@ -59,5 +59,14 @@ namespace Prank.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string HashedPassword {
+            get {
+                return ResourceManager.GetString("HashedPassword", resourceCulture);
+            }
+        }
     }
 }

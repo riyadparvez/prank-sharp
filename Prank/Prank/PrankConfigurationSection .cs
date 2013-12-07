@@ -11,7 +11,8 @@ namespace Prank
     class PrankConfigurationSection : System.Configuration.ConfigurationSection 
     {
         [ConfigurationProperty("schoolName")]
-        public string SchoolName {
+        public string SchoolName 
+        {
             get { return (string)this["schoolName"]; }
             set { this["schoolName"] = value; }
         }
