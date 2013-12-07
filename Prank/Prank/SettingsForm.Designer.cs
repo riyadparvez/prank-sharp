@@ -75,9 +75,9 @@
             this.passwordPanel.Controls.Add(this.passwordTextBox);
             this.passwordPanel.Controls.Add(this.passwordLabel);
             this.passwordPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.passwordPanel.Location = new System.Drawing.Point(0, 179);
+            this.passwordPanel.Location = new System.Drawing.Point(0, 147);
             this.passwordPanel.Name = "passwordPanel";
-            this.passwordPanel.Size = new System.Drawing.Size(284, 36);
+            this.passwordPanel.Size = new System.Drawing.Size(284, 68);
             this.passwordPanel.TabIndex = 1;
             // 
             // passwordLabel

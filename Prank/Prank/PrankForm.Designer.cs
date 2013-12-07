@@ -28,7 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.prankFormEventLog = new System.Diagnostics.EventLog();
+            ((System.ComponentModel.ISupportInitialize)(this.prankFormEventLog)).BeginInit();
             this.SuspendLayout();
+            // 
+            // prankFormEventLog
+            // 
+            this.prankFormEventLog.SynchronizingObject = this;
             // 
             // PrankForm
             // 
@@ -53,11 +59,14 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PrankForm_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrankForm_KeyPress);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.PrankForm_PreviewKeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.prankFormEventLog)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Diagnostics.EventLog prankFormEventLog;
     }
 }
 
