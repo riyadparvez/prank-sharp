@@ -46,5 +46,29 @@ namespace Prank.Properties {
                 this["Transparency"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Ctrl+Shift+P")]
+        public global::System.Windows.Forms.Keys PreferenceShortcut {
+            get {
+                return ((global::System.Windows.Forms.Keys)(this["PreferenceShortcut"]));
+            }
+            set {
+                this["PreferenceShortcut"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Password {
+            get {
+                return ((string)(this["Password"]));
+            }
+            set {
+                this["Password"] = value;
+            }
+        }
     }
 }
