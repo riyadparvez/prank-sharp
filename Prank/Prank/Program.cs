@@ -22,6 +22,8 @@ namespace Prank
         [STAThread]
         static void Main()
         {
+            Program.Initialize();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new PrankForm());

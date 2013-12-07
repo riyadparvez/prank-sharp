@@ -1,6 +1,6 @@
 ﻿namespace Prank
 {
-    partial class PrankForm
+    partial class SettingsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,29 +30,17 @@
         {
             this.SuspendLayout();
             // 
-            // PrankForm
+            // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(835, 521);
-            this.ControlBox = false;
-            this.DoubleBuffered = true;
-            this.ForeColor = System.Drawing.Color.Transparent;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "PrankForm";
-            this.Opacity = 0.01D;
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.TopMost = true;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.PrankForm_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PrankForm_KeyDown);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrankForm_KeyPress);
-            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.PrankForm_PreviewKeyDown);
+            this.Name = "SettingsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Settings";
             this.ResumeLayout(false);
 
         }
@@ -60,4 +48,3 @@
         #endregion
     }
 }
-
