@@ -94,5 +94,29 @@ namespace Prank.Properties {
                 this["UnlockShortcut"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LockScreenText {
+            get {
+                return ((string)(this["LockScreenText"]));
+            }
+            set {
+                this["LockScreenText"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool EnableLockScreenText {
+            get {
+                return ((bool)(this["EnableLockScreenText"]));
+            }
+            set {
+                this["EnableLockScreenText"] = value;
+            }
+        }
     }
 }

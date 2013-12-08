@@ -10,11 +10,11 @@ namespace Prank
 {
     class PrankConfigurationSection : System.Configuration.ConfigurationSection 
     {
-        [ConfigurationProperty("schoolName")]
-        public string SchoolName 
+        [ConfigurationProperty("Color")]
+        public string Color 
         {
-            get { return (string)this["schoolName"]; }
-            set { this["schoolName"] = value; }
+            get { return (string)this["Color"]; }
+            set { this["Color"] = value; }
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Prank
 {
     static class Program
     {
-        private System.Windows.Forms.NotifyIcon notifyIcon;
+        //private System.Windows.Forms.NotifyIcon notifyIcon;
 
         public static PrankConfigurationSection Config { get; internal set; }
 
