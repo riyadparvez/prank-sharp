@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.okCancelPanel = new System.Windows.Forms.Panel();
-            this.okButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
+            this.okButton = new System.Windows.Forms.Button();
             this.passwordPanel = new System.Windows.Forms.Panel();
-            this.passwordLabel = new System.Windows.Forms.Label();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.passwordConfirmationLabel = new System.Windows.Forms.Label();
             this.confirmPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.passwordConfirmationLabel = new System.Windows.Forms.Label();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.passwordLabel = new System.Windows.Forms.Label();
             this.shortcutsPanel = new System.Windows.Forms.Panel();
-            this.lockShortcutLabel = new System.Windows.Forms.Label();
             this.unlockShortcutLabel = new System.Windows.Forms.Label();
+            this.lockShortcutLabel = new System.Windows.Forms.Label();
             this.viewSettingsPanel = new System.Windows.Forms.Panel();
-            this.transparencyLabel = new System.Windows.Forms.Label();
             this.colorLabel = new System.Windows.Forms.Label();
+            this.transparencyLabel = new System.Windows.Forms.Label();
             this.lockScreenColorDialog = new System.Windows.Forms.ColorDialog();
             this.okCancelPanel.SuspendLayout();
             this.passwordPanel.SuspendLayout();
@@ -60,16 +60,6 @@
             this.okCancelPanel.Size = new System.Drawing.Size(284, 47);
             this.okCancelPanel.TabIndex = 0;
             // 
-            // okButton
-            // 
-            this.okButton.Location = new System.Drawing.Point(45, 11);
-            this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(75, 23);
-            this.okButton.TabIndex = 0;
-            this.okButton.Text = "OK";
-            this.okButton.UseVisualStyleBackColor = true;
-            this.okButton.Click += new System.EventHandler(this.okButton_Click);
-            // 
             // cancelButton
             // 
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -80,6 +70,16 @@
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            // 
+            // okButton
+            // 
+            this.okButton.Location = new System.Drawing.Point(45, 11);
+            this.okButton.Name = "okButton";
+            this.okButton.Size = new System.Drawing.Size(75, 23);
+            this.okButton.TabIndex = 0;
+            this.okButton.Text = "OK";
+            this.okButton.UseVisualStyleBackColor = true;
+            this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // passwordPanel
             // 
@@ -93,14 +93,21 @@
             this.passwordPanel.Size = new System.Drawing.Size(284, 68);
             this.passwordPanel.TabIndex = 1;
             // 
-            // passwordLabel
+            // confirmPasswordTextBox
             // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(61, 15);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(53, 13);
-            this.passwordLabel.TabIndex = 0;
-            this.passwordLabel.Text = "Password";
+            this.confirmPasswordTextBox.Location = new System.Drawing.Point(135, 37);
+            this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
+            this.confirmPasswordTextBox.Size = new System.Drawing.Size(132, 20);
+            this.confirmPasswordTextBox.TabIndex = 4;
+            // 
+            // passwordConfirmationLabel
+            // 
+            this.passwordConfirmationLabel.AutoSize = true;
+            this.passwordConfirmationLabel.Location = new System.Drawing.Point(23, 40);
+            this.passwordConfirmationLabel.Name = "passwordConfirmationLabel";
+            this.passwordConfirmationLabel.Size = new System.Drawing.Size(91, 13);
+            this.passwordConfirmationLabel.TabIndex = 3;
+            this.passwordConfirmationLabel.Text = "Confirm Password";
             // 
             // passwordTextBox
             // 
@@ -112,21 +119,14 @@
             this.passwordTextBox.TabIndex = 1;
             this.passwordTextBox.WordWrap = false;
             // 
-            // passwordConfirmationLabel
+            // passwordLabel
             // 
-            this.passwordConfirmationLabel.AutoSize = true;
-            this.passwordConfirmationLabel.Location = new System.Drawing.Point(23, 40);
-            this.passwordConfirmationLabel.Name = "passwordConfirmationLabel";
-            this.passwordConfirmationLabel.Size = new System.Drawing.Size(91, 13);
-            this.passwordConfirmationLabel.TabIndex = 3;
-            this.passwordConfirmationLabel.Text = "Confirm Password";
-            // 
-            // confirmPasswordTextBox
-            // 
-            this.confirmPasswordTextBox.Location = new System.Drawing.Point(135, 37);
-            this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
-            this.confirmPasswordTextBox.Size = new System.Drawing.Size(132, 20);
-            this.confirmPasswordTextBox.TabIndex = 4;
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Location = new System.Drawing.Point(61, 15);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(53, 13);
+            this.passwordLabel.TabIndex = 0;
+            this.passwordLabel.Text = "Password";
             // 
             // shortcutsPanel
             // 
@@ -138,15 +138,6 @@
             this.shortcutsPanel.Size = new System.Drawing.Size(284, 68);
             this.shortcutsPanel.TabIndex = 2;
             // 
-            // lockShortcutLabel
-            // 
-            this.lockShortcutLabel.AutoSize = true;
-            this.lockShortcutLabel.Location = new System.Drawing.Point(34, 15);
-            this.lockShortcutLabel.Name = "lockShortcutLabel";
-            this.lockShortcutLabel.Size = new System.Drawing.Size(74, 13);
-            this.lockShortcutLabel.TabIndex = 0;
-            this.lockShortcutLabel.Text = "Lock Shortcut";
-            // 
             // unlockShortcutLabel
             // 
             this.unlockShortcutLabel.AutoSize = true;
@@ -155,6 +146,15 @@
             this.unlockShortcutLabel.Size = new System.Drawing.Size(84, 13);
             this.unlockShortcutLabel.TabIndex = 1;
             this.unlockShortcutLabel.Text = "Unlock Shortcut";
+            // 
+            // lockShortcutLabel
+            // 
+            this.lockShortcutLabel.AutoSize = true;
+            this.lockShortcutLabel.Location = new System.Drawing.Point(34, 15);
+            this.lockShortcutLabel.Name = "lockShortcutLabel";
+            this.lockShortcutLabel.Size = new System.Drawing.Size(74, 13);
+            this.lockShortcutLabel.TabIndex = 0;
+            this.lockShortcutLabel.Text = "Lock Shortcut";
             // 
             // viewSettingsPanel
             // 
@@ -166,15 +166,6 @@
             this.viewSettingsPanel.Size = new System.Drawing.Size(284, 66);
             this.viewSettingsPanel.TabIndex = 3;
             // 
-            // transparencyLabel
-            // 
-            this.transparencyLabel.AutoSize = true;
-            this.transparencyLabel.Location = new System.Drawing.Point(37, 47);
-            this.transparencyLabel.Name = "transparencyLabel";
-            this.transparencyLabel.Size = new System.Drawing.Size(72, 13);
-            this.transparencyLabel.TabIndex = 0;
-            this.transparencyLabel.Text = "Transparency";
-            // 
             // colorLabel
             // 
             this.colorLabel.AutoSize = true;
@@ -184,11 +175,20 @@
             this.colorLabel.TabIndex = 1;
             this.colorLabel.Text = "Color";
             // 
+            // transparencyLabel
+            // 
+            this.transparencyLabel.AutoSize = true;
+            this.transparencyLabel.Location = new System.Drawing.Point(37, 47);
+            this.transparencyLabel.Name = "transparencyLabel";
+            this.transparencyLabel.Size = new System.Drawing.Size(72, 13);
+            this.transparencyLabel.TabIndex = 0;
+            this.transparencyLabel.Text = "Transparency";
+            // 
             // SettingsForm
             // 
             this.AcceptButton = this.okButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(284, 386);
             this.Controls.Add(this.viewSettingsPanel);

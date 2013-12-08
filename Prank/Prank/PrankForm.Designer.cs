@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrankForm));
             this.prankFormEventLog = new System.Diagnostics.EventLog();
             ((System.ComponentModel.ISupportInitialize)(this.prankFormEventLog)).BeginInit();
             this.SuspendLayout();
@@ -38,10 +39,8 @@
             // 
             // PrankForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(835, 521);
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
@@ -52,7 +51,6 @@
             this.Opacity = 0.01D;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PrankForm_Load);
