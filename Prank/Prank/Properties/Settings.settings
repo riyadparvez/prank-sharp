@@ -6,7 +6,7 @@
       <Value Profile="(Default)">Transparent</Value>
     </Setting>
     <Setting Name="Transparency" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">1</Value>
+      <Value Profile="(Default)">99</Value>
     </Setting>
     <Setting Name="PreferenceShortcut" Type="System.Windows.Forms.Keys" Scope="User">
       <Value Profile="(Default)">Ctrl+Shift+P</Value>
