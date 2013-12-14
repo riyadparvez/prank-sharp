@@ -16,6 +16,17 @@ namespace Prank
             InitializeComponent();
         }
 
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            Keys modifierKeys = e.Modifiers;
+
+            Keys pressedKey = e.KeyData ^ modifierKeys; //remove modifier keys
+
+            //do stuff with pressed and modifier keys
+            var converter = new KeysConverter();
+            //textBox1.Text = converter.ConvertToString(e.KeyData);
+        }
+
         private void okButton_Click(object sender, EventArgs e)
         {
             //Properties.Settings.Default.Color = Color.AliceBlue;
