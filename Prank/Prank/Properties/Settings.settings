@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="Color" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">Transparent</Value>
+      <Value Profile="(Default)">ButtonHighlight</Value>
     </Setting>
     <Setting Name="Transparency" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">99</Value>

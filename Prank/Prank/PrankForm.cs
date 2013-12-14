@@ -20,6 +20,7 @@ namespace Prank
         public PrankForm()
         {
             InitializeComponent();
+            this.AllowTransparency = true;
             this.KeyPreview = true;
             //startup_key.SetValue("prank-sharp", Application.ExecutablePath.ToString());
             //startup_key.DeleteValue("prank-sharp");
@@ -32,6 +33,7 @@ namespace Prank
         private void PrankForm_Load(object sender, EventArgs e)
         {
             this.BackColor = Properties.Settings.Default.Color;
+            //this.Opacity = 100 - Properties.Settings.Default.Transparency;
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)

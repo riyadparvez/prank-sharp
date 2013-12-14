@@ -25,7 +25,7 @@ namespace Prank.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Transparent")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ButtonHighlight")]
         public global::System.Drawing.Color Color {
             get {
                 return ((global::System.Drawing.Color)(this["Color"]));
