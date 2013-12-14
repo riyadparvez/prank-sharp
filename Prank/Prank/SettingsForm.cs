@@ -18,6 +18,8 @@ namespace Prank
 
         private void okButton_Click(object sender, EventArgs e)
         {
+            //Properties.Settings.Default.Color = Color.AliceBlue;
+            //Properties.Settings.Default.Transparency = Color.AliceBlue;
             Properties.Settings.Default.Save();
         }
 

@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,6 +14,7 @@ namespace Prank
 {
     public partial class PrankForm : Form
     {
+        private bool shouldClose = false;
         private RegistryKey startup_key = 
             Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
         private KeyboardHook hook = new KeyboardHook();
@@ -30,6 +32,33 @@ namespace Prank
             hook.RegisterHotKey(Prank.ModifierKeys.Control | Prank.ModifierKeys.Alt, Keys.F);
         }
 
+        private void KeepOnTop() 
+        {
+            /*
+            // Repeat every 2 seconds.
+            IObservable<long> observable = Observable.Interval(TimeSpan.FromSeconds(2));
+
+            // Token for cancelation
+            CancellationTokenSource source = new CancellationTokenSource();
+
+            // Create task to execute.
+            Action action = (() => Console.WriteLine("Action started at: {0}", DateTime.Now));
+            Action resumeAction = (() => Console.WriteLine("Second action started at {0}", DateTime.Now));
+
+            // Subscribe the obserable to the task on execution.
+            observable.Subscribe(x =>
+            {
+                Task task = new Task(action); task.Start();
+                task.ContinueWith(c => resumeAction());
+            }, source.Token);
+            */
+        }
+
+        private void Initialize() 
+        {
+ 
+        }
+
         private void PrankForm_Load(object sender, EventArgs e)
         {
             this.BackColor = Properties.Settings.Default.Color;
@@ -40,6 +69,7 @@ namespace Prank
         {
             if (keyData == (Keys.Control | Keys.F)) 
             {
+                shouldClose = true;
                 return true;
             }
             //return base.ProcessCmdKey(ref msg, keyData);
@@ -69,6 +99,23 @@ namespace Prank
         private void Exit(object sender, KeyPressedEventArgs e) 
         {
             Application.Exit();
+        }
+
+        private void PrankForm_Deactivate(object sender, EventArgs e)
+        {
+            this.TopMost = true;
+        }
+
+        private void PrankForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!shouldClose)
+            {
+                if (e.CloseReason == CloseReason.UserClosing)
+                {
+                    e.Cancel = true;
+                }
+                shouldClose = false;
+            }
         }
     }
 }

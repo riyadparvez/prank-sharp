@@ -53,6 +53,8 @@
             this.ShowInTaskbar = false;
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Deactivate += new System.EventHandler(this.PrankForm_Deactivate);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PrankForm_FormClosing);
             this.Load += new System.EventHandler(this.PrankForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PrankForm_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrankForm_KeyPress);
