@@ -18,7 +18,7 @@ namespace Prank
 
         private void okButton_Click(object sender, EventArgs e)
         {
-
+            Properties.Settings.Default.Save();
         }
 
         private void cancelButton_Click(object sender, EventArgs e)

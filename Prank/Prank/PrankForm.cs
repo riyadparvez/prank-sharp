@@ -31,7 +31,7 @@ namespace Prank
 
         private void PrankForm_Load(object sender, EventArgs e)
         {
-
+            this.BackColor = Properties.Settings.Default.Color;
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
