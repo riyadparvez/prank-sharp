@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Prank
 {
-    public partial class PrankForm : Form
+    public partial class PrankForm : Form, IMessageFilter 
     {
         private bool shouldClose = false;
         private RegistryKey startup_key = 
@@ -22,6 +22,8 @@ namespace Prank
         public PrankForm()
         {
             InitializeComponent();
+            Application.AddMessageFilter(this);
+            this.FormClosed += (o, e) => Application.RemoveMessageFilter(this);
             this.AllowTransparency = true;
             this.KeyPreview = true;
             //startup_key.SetValue("prank-sharp", Application.ExecutablePath.ToString());
@@ -65,6 +67,19 @@ namespace Prank
             //this.Opacity = 100 - Properties.Settings.Default.Transparency;
         }
 
+        public bool PreFilterMessage(ref Message m)
+        {
+            /*
+            // Catch WM_KEYDOWN message
+            if (m.Msg == 0x100 && (Keys)m.WParam == Keys.F1)
+            {
+                MessageBox.Show("Help me!");
+                return true;
+            }
+            */
+            return false;
+        }
+
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == (Keys.Control | Keys.F)) 
@@ -103,7 +118,7 @@ namespace Prank
 
         private void PrankForm_Deactivate(object sender, EventArgs e)
         {
-            this.TopMost = true;
+            //this.TopMost = true;
         }
 
         private void PrankForm_FormClosing(object sender, FormClosingEventArgs e)
